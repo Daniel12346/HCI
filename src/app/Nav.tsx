@@ -2,13 +2,15 @@ import Image from "next/image";
 import logo from "public/hci-blog-logo.svg";
 import menuIcon from "public/hci-blog-menu.svg";
 import penguinImg from "public/animal-g7af8cc5e7_1920.jpg"
-
+import Link from "next/link";
 
 export default () => {
   return  (
-  <nav className='flex justify-evenly items-center bg-orange-100 border-b-[3px] p-4 border-black mb-8'>
+  <nav className='flex justify-evenly items-center bg-orange-100 border-b-[3px] p-3 border-black mb-8'>
     <div className='h-10 cursor-pointer'>
+      <Link href='/'>
         <Image style={{height:"100%", width:"auto"}} src={logo} alt="logo"></Image>
+      </Link>
     </div>
     <div className='h-12 w-12 rounded-full border-2 p-0.5 border-black cursor-pointer'>
         <Image style={{height:"100%", width:"auto", borderRadius:"9999px", objectFit:"cover"}} src={penguinImg} alt="logo"></Image>
