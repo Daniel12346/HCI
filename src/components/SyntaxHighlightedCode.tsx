@@ -27,20 +27,20 @@ export default ({code}:Props)=>{
     useEffect(()=>{
         console.log(parsed);});
     return (
-    <div className="w-10/12 mb-2 max-sm:w-full" >
+    <div className="w-11/12 mb-2 max-sm:w-full" >
             <div className="border-black border-2">
                 {/* <div className="p-3 border-black border-2">
                   <pre className="overflow-x-scroll p-2 border-2 border-black ">{code}</pre>
                 </div> */}
                 <div className="border-black border-2 h-fit p-3"> 
-                    <pre className="overflow-x-scroll p-2 border-2 border-black bg-orange-50">
+                    <pre className="overflow-x-scroll p-2 border-2 border-black ">
                         {parsed.map(w=><span className={(re1.test(w) && keywords.JS.includes(w) && "text-purple-600") ||
-                                re1.test(w) && "text-blue-400" || 
+                                re1.test(w) && "text-blue-500" || 
                                 ""}>{w}</span>)}
                     </pre>
                 </div>  
                 <div>
-                    <button className="bg-amber-100 p-3">
+                    <button className="bg-amber-200 p-3">
                         copy
                     </button> 
                 </div>
