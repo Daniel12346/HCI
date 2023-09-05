@@ -1,10 +1,10 @@
-import './globals.css'
-import Nav from './Nav'
+import "./globals.css";
+import Nav from "./Nav";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
@@ -13,9 +13,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className='bg-violet-50'>
-        <Nav/>
-        {children}</body>
+      <body className="bg-violet-50 flex flex-col w-full align-center">
+        <Nav />
+        <div className="flex flex-col items-center w-full">{children}</div>
+      </body>
     </html>
-  )
+  );
 }

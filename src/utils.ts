@@ -1,21 +1,23 @@
-import { createClient } from 'contentful';
+import { createClient } from "contentful";
 
-// const client = createClient({
-//   space: process.env.CONTENTFUL_SPACE_ID!,
-//   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN!
-// });
-const client = createClient({
+
+export const client = createClient({
   space: "fznrkcuyei7u",
-  accessToken: "htO6dggPU0E7pVobRtl2AJrRhDKqRcdlyeb9OkrvwJQ"
+  accessToken: "htO6dggPU0E7pVobRtl2AJrRhDKqRcdlyeb9OkrvwJQ",
 });
 
 // Retrieve the list of blog posts from Contentful
-const getBlogPosts = async () => {
+export const getBlogPosts = async () => {
   const response = await client.getEntries({
-    content_type: 'post',
+    content_type: "post",
+    //TODO: order
   });
 
   return response.items;
 };
 
-export default getBlogPosts;
+export const getBlogPost = async (id: string) => {
+  const response = await client.getEntry(id);
+  console.log(response);
+  return response;
+};
