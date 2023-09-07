@@ -6,7 +6,7 @@ import penguinImg from "public/animal-g7af8cc5e7_1920.jpg";
 
 const PostDisplayGrid = () => {
   return (
-    <div className="w-full max-h-[20rem]  grid grid-cols-3 grid-rows-2 gap-2 bg-stone-50 p-2 border-2 border-black">
+    <div className="w-full  grid grid-cols-3 -rows-2 gap-2 bg-stone-50 p-2 border-2 border-black">
       <div className="row-span-full h-full cover border-2 border-black relative">
         <Image
           style={{ height: "100%", objectFit: "cover" }}

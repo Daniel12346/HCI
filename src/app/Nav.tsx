@@ -7,6 +7,7 @@ import triangleIcon from "public/hci-blog-triangle.svg";
 import penguinImg from "public/animal-g7af8cc5e7_1920.jpg";
 import Link from "next/link";
 import { useState } from "react";
+import SearchPosts from "@/components/SearchPosts";
 
 const Nav = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
@@ -36,12 +37,7 @@ const Nav = () => {
             alt="user profile image"
           ></Image>
         </div>
-        <div className="w-4/12">
-          <input
-            placeholder="search ..."
-            className="w-full h-10 bg-amber-100 border-2 border-black placeholder-black px-4 focus:ring-4 ring-orange-100 focus:bg-orange-50"
-          ></input>
-        </div>
+        <SearchPosts />
         <div
           className="h-10 p-1 cursor-pointer hover"
           onClick={() => setIsMenuShown(!isMenuShown)}
@@ -57,7 +53,7 @@ const Nav = () => {
       <div
         data-is-menu-shown={isMenuShown}
         className="absolute right-0 top-0 w-full h-screen bg-amber-400 z-20 pt-4 max-w-md text-lg 
-        data-[is-menu-shown=false]:translate-x-full transition-all duration-500 ease-in-out"
+        data-[is-menu-shown=false]:hidden data-[is-menu-shown=false]:translate-x-full transition-all duration-500 ease-in-out"
       >
         <ul className="flex flex-col gap-y-6 pt-20 font-bold ">
           <li
@@ -72,24 +68,12 @@ const Nav = () => {
               <Image src={triangleIcon} alt="triangle icon" />
             </div>
             <ul className="font-semibold text-base w-full mt-1 group-data-[are-categories-shown=false]:hidden">
-              <li className="cursor-pointer hover:underline px-4 mb-1">
-                category 1
-              </li>
-              <li className="cursor-pointer hover:underline px-4 mb-1">
-                category 1
-              </li>
-              <li className="cursor-pointer hover:underline px-4 mb-1">
-                category 1
-              </li>
-              <li className="cursor-pointer hover:underline px-4 mb-1">
-                category 1
-              </li>
-              <li className="cursor-pointer hover px-4">category 1</li>
+              <li className="cursor-pointer hover:underline px-4 mb-1"></li>
             </ul>
           </li>
+          {/* //TODO: */}
           <li className="px-8 cursor-pointer hover:underline">top posts</li>
           <li className="px-8 cursor-pointer hover:underline">recent posts</li>
-          <li className="px-8 cursor-pointer hover:underline">about</li>
           <li className="px-8 font-normal border-t-2 border-dashed border-black pt-2 cursor-pointer hover:underline">
             log out
           </li>

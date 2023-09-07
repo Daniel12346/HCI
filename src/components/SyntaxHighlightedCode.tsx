@@ -59,9 +59,6 @@ const SyntaxHighlightedCode = ({ code }: Props) => {
     JS: {},
   };
 
-  useEffect(() => {
-    console.log(parsed);
-  });
   return (
     <div className="w-11/12 mb-2 max-sm:w-full">
       <div className="border-black border-2">
@@ -69,21 +66,27 @@ const SyntaxHighlightedCode = ({ code }: Props) => {
                   <pre className="overflow-x-scroll p-2 border-2 border-black ">{code}</pre>
                 </div> */}
         <div className="border-black border-2 h-fit p-3">
-          <pre className="overflow-x-scroll p-2 border-2 border-black ">
+          <pre
+            style={{ whiteSpace: "pre-wrap" }}
+            className="overflow-x-scroll wrap p-2 border-2 border-black "
+          >
             {parsed.map((w, i) => (
-              <span
-                //TODO: use actual index
-                key={i}
-                className={
-                  (re1.test(w) &&
-                    keywords.JS.includes(w) &&
-                    "text-purple-600") ||
-                  (re1.test(w) && "text-blue-500") ||
-                  ""
-                }
-              >
-                {w}
-              </span>
+              <>
+                <span
+                  //TODO: use actual index
+                  key={i}
+                  className={
+                    (re1.test(w) &&
+                      keywords.JS.includes(w) &&
+                      "text-purple-600") ||
+                    (re1.test(w) && "text-blue-500") ||
+                    ""
+                  }
+                >
+                  {w}
+                  {w === ";" && <br />}
+                </span>
+              </>
             ))}
           </pre>
         </div>
@@ -91,7 +94,7 @@ const SyntaxHighlightedCode = ({ code }: Props) => {
           <button className="bg-amber-200 p-3">copy</button>
         </div>
       </div>
-      <span className="pl-2 text-slate-600 text-sm">opis koda</span>
+      {/* <span className="pl-2 text-slate-600 text-sm">opis koda</span> */}
     </div>
   );
 };

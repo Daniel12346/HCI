@@ -8,9 +8,10 @@ interface PostProps {
 }
 //TODO: post prop
 const Post = ({ post, accentColorClassName = "bg-amber-300" }: PostProps) => {
+  const category = post.fields.category;
   return (
     <div className="flex flex-row justify-center">
-      <div className="w-full lg:w-10/12 max-w-lg border-2 border-black bg-stone-100 ">
+      <div className="w-full lg:w-11/12 max-w-lg border-2 border-black bg-stone-100 ">
         <div className="p-3">
           <div className="relative mb-3 h-[25vh] max-h-44 border-2 border-black">
             <Image
@@ -45,20 +46,21 @@ const Post = ({ post, accentColorClassName = "bg-amber-300" }: PostProps) => {
             <div className="flex gap-x-2 max-sm:flex-col">
               <span>
                 <span
-                  className={`font-semibold ${accentColorClassName} px-1 inline-block`}
+                  style={{ backgroundColor: "#" + category.fields.flairColor }}
+                  className={`font-semibold px-1 inline-block text-white`}
                 >
-                  {post.fields.category}
+                  {category.fields.title}
                 </span>
               </span>
             </div>
-            <div className="flex gap-x-2 max-sm:flex-col">
+            {/* <div className="flex gap-x-2 max-sm:flex-col">
               <span>
                 <span className="font-semibold">10</span> views
               </span>
               <span>
                 <span className="font-semibold">3</span> comments
               </span>
-            </div>
+            </div> */}
             {/* <span className="inline-block">
                         <span className={`font-semibold ${accentColorClassName} px-1 mr-1 inline-block`}>{category}</span>
                         <span className="font-semibold">2</span> days ago 

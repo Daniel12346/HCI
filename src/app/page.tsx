@@ -13,9 +13,9 @@ const Home = async () => {
   });
   return (
     <div className="flex items-center flex-col">
-      <section className="flex flex-col mb-12 mt-3 w-10/12 max-w-xl max-sm:mb-10">
+      <section className="flex md:hidden flex-col mb-12 mt-3 w-10/12 max-w-xl max-sm:mb-10">
         <h1 className="font-extrabold text-2xl pl-5 pb-2 mb-4">topics</h1>
-        <div className="flex justify-between w-full max-w-xl flex-wrap gap-2">
+        <div className="lg:hidden flex justify-between w-full max-w-xl flex-wrap gap-2">
           <span className="font-semibold">category 1</span>
           <span className="font-semibold">category 2</span>
           <span className="font-semibold">category 3</span>

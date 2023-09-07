@@ -1,7 +1,11 @@
 import Post from "@/components/Post";
-import Image from "next/image";
+import { client } from "@/utils";
+import Link from "next/link";
 
-const Categories = () => {
+const Categories = async () => {
+  const categories = await client.getEntries({
+    content_type: "category",
+  });
   return (
     <div className="flex justify-center">
       <div className="flex flex-col w-10/12 max-w-xl">
@@ -9,21 +13,15 @@ const Categories = () => {
           <div className="flex flex-col">
             <h1 className="font-extrabold text-xl pl-5 mr-2 mb-2">topics</h1>
             <ul className="flex flex-wrap gap-3">
-              <li>
-                <span className="text-xl underline">category 1</span>
-              </li>
-              <li>
-                <span className="text-xl underline">category 2</span>
-              </li>
-              <li>
-                <span className="text-xl underline">category 3</span>
-              </li>
-              <li>
-                <span className="text-xl underline">category 4</span>
-              </li>
-              <li>
-                <span className="text-xl underline">category 5</span>
-              </li>
+              {categories.items.map((category) => (
+                <li key={category.sys.id}>
+                  <Link href={`/categories/${category.sys.id}`}>
+                    <span className="text-xl underline">
+                      {(category.fields as any).title}
+                    </span>
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
