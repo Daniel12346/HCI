@@ -56,7 +56,7 @@ Nakon uvaženih savjeta profesora, stranice je nakon prve iteracije dizajna post
 
 10. Help and documentation
 
-Pokraj istaknutih objava dano je objašnjenje te kategorije.
+Pokraj kategorije istaknutih objava dano je kratko objašnjenje te kategorije.
 
 ### CRAP principles
 
@@ -74,4 +74,4 @@ Objave su vertikalno poredane, što ih čini vizualnom cjelinom.
 
 4. Proximity
 
-
+Razmak između objava je mali u odnosu na druge razmake na istoj stranici, čime se ističe njihova povezanost.
