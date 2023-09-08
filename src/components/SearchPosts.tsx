@@ -1,5 +1,6 @@
 import { client } from "@/utils";
 import { Entry, EntryCollection } from "contentful";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const SearchPosts = () => {
@@ -26,9 +27,6 @@ const SearchPosts = () => {
         onChange={(e) => {
           setKeyword(e.target.value);
         }}
-        onBlur={() => {
-          setKeyword("");
-        }}
       ></input>
       <div className="absolute left-0 top-[100%] h-fit w-full flex flex-col items-center bg-white shadow-md">
         {posts &&
@@ -39,10 +37,22 @@ const SearchPosts = () => {
                   key={post.sys.id}
                   className="flex w-full flex-wrap justify-between last:border-none p-2 gap-2 border-b-2 border-dashed border-black "
                 >
-                  <span>{post.fields.title}</span>
-                  <span className="font-light">
-                    {new Date(post.sys.createdAt).toLocaleDateString()}
-                  </span>
+                  <Link
+                    style={{
+                      display: "flex",
+                      width: "100%",
+                      justifyContent: "space-between",
+                    }}
+                    href={`/posts/${post.sys.id}`}
+                  >
+                    <span onClick={() => setKeyword("")} className="pointer">
+                      {post.fields.title}
+                    </span>
+
+                    <span className="font-light">
+                      {new Date(post.sys.createdAt).toLocaleDateString()}
+                    </span>
+                  </Link>
                 </div>
               )
             );
