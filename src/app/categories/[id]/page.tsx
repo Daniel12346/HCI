@@ -1,7 +1,5 @@
 import Post from "@/components/Post";
 import { client, getCategoryPosts } from "@/utils";
-import Image from "next/image";
-import codingIcon from "public/hci-blog-coding-icon.svg";
 
 interface CategoryProps {
   params: {
