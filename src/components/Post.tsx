@@ -1,6 +1,7 @@
 import { Entry } from "contentful";
 import Image from "next/image";
 import Link from "next/link";
+import starIcon from "public/icons8-star-48.png";
 
 interface PostProps {
   post: Entry<any>;
@@ -9,6 +10,7 @@ interface PostProps {
 //TODO: post prop
 const Post = ({ post, accentColorClassName = "bg-amber-300" }: PostProps) => {
   const category = post.fields.category;
+  console.log(post);
   return (
     <div className="flex flex-row justify-center">
       <div className="w-full lg:w-11/12 max-w-lg border-2 border-black bg-stone-100 ">
@@ -44,27 +46,26 @@ const Post = ({ post, accentColorClassName = "bg-amber-300" }: PostProps) => {
           }
           <div className="flex  flex-wrap justify-between border-t-2 border-dashed border-black pt-2 w-full">
             <div className="flex gap-x-2 max-sm:flex-col">
-              <span>
+              <div className="flex  gap-2">
                 <span
                   style={{ backgroundColor: "#" + category.fields.flairColor }}
                   className={`font-semibold px-1 inline-block text-white`}
                 >
                   {category.fields.title}
                 </span>
-              </span>
+                <span className="flex border-2 border-amber-400 px-1">
+                  featured
+                  {post.fields.isFeatured && (
+                    <Image
+                      src={starIcon}
+                      alt="featured post icon"
+                      width={24}
+                      height={24}
+                    />
+                  )}
+                </span>
+              </div>
             </div>
-            {/* <div className="flex gap-x-2 max-sm:flex-col">
-              <span>
-                <span className="font-semibold">10</span> views
-              </span>
-              <span>
-                <span className="font-semibold">3</span> comments
-              </span>
-            </div> */}
-            {/* <span className="inline-block">
-                        <span className={`font-semibold ${accentColorClassName} px-1 mr-1 inline-block`}>{category}</span>
-                        <span className="font-semibold">2</span> days ago 
-                    </span> */}
           </div>
         </div>
       </div>

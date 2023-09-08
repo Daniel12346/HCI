@@ -4,15 +4,28 @@ import Image from "next/image";
 import logo from "public/hci-blog-logo.svg";
 import menuIcon from "public/hci-blog-menu.svg";
 import triangleIcon from "public/hci-blog-triangle.svg";
-import penguinImg from "public/animal-g7af8cc5e7_1920.jpg";
 import Link from "next/link";
-import { useState } from "react";
+import { use, useEffect, useState } from "react";
 import SearchPosts from "@/components/SearchPosts";
+import { client } from "@/utils";
+import { Entry } from "contentful-management";
+import { EntryCollection } from "contentful";
 
 const Nav = () => {
   const [isMenuShown, setIsMenuShown] = useState(false);
   const [areCategoriesShown, setAreCategoriesShown] = useState(false);
-
+  const [categories, setCategories] = useState<EntryCollection<any> | null>(
+    null
+  );
+  useEffect(() => {
+    const getCategories = async () => {
+      const categories = await client.getEntries({
+        content_type: "category",
+      });
+      categories && setCategories(categories);
+    };
+    getCategories();
+  }, []);
   return (
     <div className="w-full ">
       <nav className="flex max-sm:justify-between justify-evenly items-center relative z-40 bg-amber-400 border-b-[3px] p-3 border-black mb-8">
@@ -24,18 +37,6 @@ const Nav = () => {
               alt="logo"
             ></Image>
           </Link>
-        </div>
-        <div className="h-12 w-12 rounded-full border-2 p-0.5 border-black cursor-pointer hover">
-          <Image
-            style={{
-              height: "100%",
-              width: "auto",
-              borderRadius: "9999px",
-              objectFit: "cover",
-            }}
-            src={penguinImg}
-            alt="user profile image"
-          ></Image>
         </div>
         <SearchPosts />
         <div
@@ -49,7 +50,6 @@ const Nav = () => {
           ></Image>
         </div>
       </nav>
-
       <div
         data-is-menu-shown={isMenuShown}
         className="absolute right-0 top-0 w-full h-screen bg-amber-400 z-20 pt-4 max-w-md text-lg 
@@ -58,24 +58,38 @@ const Nav = () => {
         <ul className="flex flex-col gap-y-6 pt-20 font-bold ">
           <li
             data-are-categories-shown={areCategoriesShown}
-            className="px-8 flex flex-wrap group cursor-pointer hover:underline"
+            className="px-8 flex flex-wrap cursor-pointer"
           >
             <span>topics</span>
             <div
-              className="ml-2 self-center group-data-[are-categories-shown=false]:rotate-[270deg] cursor-pointer"
+              className={`ml-2 self-center  cursor-pointer ${
+                !areCategoriesShown && "rotate-[270deg]"
+              }`}
               onClick={() => setAreCategoriesShown(!areCategoriesShown)}
             >
               <Image src={triangleIcon} alt="triangle icon" />
             </div>
-            <ul className="font-semibold text-base w-full mt-1 group-data-[are-categories-shown=false]:hidden">
-              <li className="cursor-pointer hover:underline px-4 mb-1"></li>
+            <ul
+              className={`font-semibold text-base w-full mt-1 ${
+                !areCategoriesShown && "hidden"
+              }`}
+            >
+              {categories?.items.map((category) => (
+                <li
+                  key={category.sys.id}
+                  className="cursor-pointer hover:underline px-4 mb-1"
+                >
+                  {(category.fields as any).title}
+                </li>
+              ))}
             </ul>
           </li>
           {/* //TODO: */}
-          <li className="px-8 cursor-pointer hover:underline">top posts</li>
-          <li className="px-8 cursor-pointer hover:underline">recent posts</li>
-          <li className="px-8 font-normal border-t-2 border-dashed border-black pt-2 cursor-pointer hover:underline">
-            log out
+          <li className="px-8 cursor-pointer hover:underline">
+            <Link href={"/featured"}>featured posts</Link>
+          </li>
+          <li className="px-8 cursor-pointer hover:underline">
+            <Link href={"/recent"}>recent posts</Link>
           </li>
         </ul>
       </div>

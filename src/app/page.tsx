@@ -1,7 +1,6 @@
 import Post from "../components/Post";
 
 import PostsDisplayGrid from "src/components/PostsDisplayGrid";
-import AuthHome from "@/components/AuthHome";
 import { client, getBlogPosts } from "@/utils";
 import { Entry } from "contentful";
 
@@ -13,23 +12,19 @@ const Home = async () => {
   });
   return (
     <div className="flex items-center flex-col">
-      <section className="flex md:hidden flex-col mb-12 mt-3 w-10/12 max-w-xl max-sm:mb-10">
-        <h1 className="font-extrabold text-2xl pl-5 pb-2 mb-4">topics</h1>
-        <div className="lg:hidden flex justify-between w-full max-w-xl flex-wrap gap-2">
-          <span className="font-semibold">category 1</span>
-          <span className="font-semibold">category 2</span>
-          <span className="font-semibold">category 3</span>
-          <span className="font-semibold">category 4</span>
-        </div>
-      </section>
-
       <div className="flex flex-col w-10/12 max-w-xl">
-        <div className="flex flex-row align-text-bottom gap-1 pl-5 pb-3">
-          <h1 className="font-extrabold text-2xl">top posts</h1>
-          <a className="underline inline-block self-end pb-1 ml-1 font-semibold">
-            view more
-          </a>
+        <div className="flex flex-col  w-full align-text-bottom gap-1 pl-5 pb-3">
+          <div className="w-full flex gap-1">
+            <h1 className="font-extrabold text-2xl">featured</h1>
+            <a className="underline inline-block self-end pb-1 ml-1 font-semibold">
+              view more
+            </a>
+          </div>
+          <div className="w-full">
+            <span>posts hand-picked by the author of this blog</span>
+          </div>
         </div>
+        {/* @ts-expect-error Server Component */}
         <PostsDisplayGrid />
         <section className="mb-10">
           <div className="flex flex-row align-text-bottom gap-1 pl-5 pb-3 mt-9">

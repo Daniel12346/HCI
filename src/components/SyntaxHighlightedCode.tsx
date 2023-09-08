@@ -90,9 +90,7 @@ const SyntaxHighlightedCode = ({ code }: Props) => {
             ))}
           </pre>
         </div>
-        <div>
-          <button className="bg-amber-200 p-3">copy</button>
-        </div>
+        <div>{/* <button className="bg-amber-200 p-3">copy</button> */}</div>
       </div>
       {/* <span className="pl-2 text-slate-600 text-sm">opis koda</span> */}
     </div>

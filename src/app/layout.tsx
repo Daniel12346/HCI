@@ -20,6 +20,7 @@ export default function RootLayout({
           <Nav />
         </div>
         {/* @ts-expect-error Server Component */}
+
         <Sidebar />
         <div className="flex flex-col items-center w-full min-h-[100vh]">
           {children}
