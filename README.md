@@ -66,7 +66,12 @@ Kontrast je uočljiv u odabiru boja; naslovi objava se ističu zbog korištenja 
 
 2. Repetition
 
-
+Boje korištene kod objava u različitim komponentama su konzistente, njihovo ponavljanje olakšava korisniku uočavanje i razumijevanje objava.
 
 3. Alignment
+
+Objave su vertikalno poredane, što ih čini vizualnom cjelinom.
+
 4. Proximity
+
+

@@ -19,7 +19,8 @@ const Home = async () => {
               Daniel Vrandečić&apos;{" "}
               <span className="text-amber-700 text-4xl">blog</span> -{" "}
               <span className="font-normal">
-                my <span className="font-light text-sm">and ChatGPT's</span>{" "}
+                my{" "}
+                <span className="font-light text-sm">and ChatGPT&apos;s</span>{" "}
                 thoughts on everything
               </span>
             </span>
