@@ -1,5 +1,5 @@
 import { client } from "@/utils";
-import { Entry, EntryCollection } from "contentful";
+import { EntryCollection } from "contentful";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
