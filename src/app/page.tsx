@@ -13,6 +13,18 @@ const Home = async () => {
   return (
     <div className="flex items-center flex-col">
       <div className="flex flex-col w-10/12 max-w-xl">
+        <div className="flex flex-col items-center w-full">
+          <h1 className="mb-10 bg-amber-200 p-5  outline-dashed outline-black">
+            <span className="font-extrabold text-2xl">
+              Daniel Vrandečić's{" "}
+              <span className="text-amber-700 text-4xl">blog</span> -{" "}
+              <span className="font-normal">
+                my <span className="font-light text-sm">and ChatGPT's</span>{" "}
+                thoughts on everything
+              </span>
+            </span>
+          </h1>
+        </div>
         <div className="flex flex-col  w-full align-text-bottom gap-1 pl-5 pb-3">
           <div className="w-full flex gap-1">
             <h1 className="font-extrabold text-2xl">featured</h1>
