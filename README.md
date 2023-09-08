@@ -52,6 +52,8 @@ Od početnog zaslona do bilo koje kategorije potrebno je najviše 3 klika.
 
 9. Aesthetic and minimalist design
 
+Nakon uvaženih savjeta profesora, stranice je nakon prve iteracije dizajna postala atraktivnija, što nije naštetilo njezinoj jednostavnosti za uporabu.
+
 10. Help and documentation
 
 Pokraj istaknutih objava dano je objašnjenje te kategorije.
@@ -59,6 +61,12 @@ Pokraj istaknutih objava dano je objašnjenje te kategorije.
 ### CRAP principles
 
 1. Contrast
+
+Kontrast je uočljiv u odabiru boja; naslovi objava se ističu zbog korištenja crne i žute čiji kontrast privlači pažnju korisnika. Kontrast je vidljiv i u odnosu veličina te debljina slova naslova i sadržaja objava. Naslovi i podnaslovi su znatno deblji od ostalog tektsta jer korisnik njih može brzo uočiti i pročitati a navode ga na daljnje čitanje.
+
 2. Repetition
+
+
+
 3. Alignment
 4. Proximity

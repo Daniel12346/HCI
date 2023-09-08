@@ -75,10 +75,12 @@ const Nav = () => {
               }`}
             >
               {categories?.items.map((category) => (
-                <Link href={`/categories/${category.sys.id}`}>
+                <Link
+                  key={category.sys.id}
+                  href={`/categories/${category.sys.id}`}
+                >
                   <li
                     onClick={() => setIsMenuShown(false)}
-                    key={category.sys.id}
                     className="cursor-pointer hover:underline px-4 mb-1"
                   >
                     {(category.fields as any).title}

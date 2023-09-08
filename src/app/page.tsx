@@ -16,7 +16,7 @@ const Home = async () => {
         <div className="flex flex-col items-center w-full">
           <h1 className="mb-10 bg-amber-200 p-5  outline-dashed outline-black">
             <span className="font-extrabold text-2xl">
-              Daniel Vrandečić's{" "}
+              Daniel Vrandečić&apos;{" "}
               <span className="text-amber-700 text-4xl">blog</span> -{" "}
               <span className="font-normal">
                 my <span className="font-light text-sm">and ChatGPT's</span>{" "}
