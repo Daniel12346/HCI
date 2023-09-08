@@ -64,7 +64,7 @@ const Post = async ({ params }: PostProps) => {
   const post = await client.getEntry<any>(params.id);
   const category = post.fields.category;
   return (
-    <div className="flex flex-col items-center w-full">
+    <div className="flex flex-col p-2 items-center w-full">
       <div className="relative mb-6 h-[25vh] max-h-64 border-2 border-black w-11/12 max-w-3xl">
         <Image
           priority

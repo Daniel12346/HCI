@@ -15,7 +15,7 @@ export default function RootLayout({
       */}
       <head />
       {/* <body className="bg-violet-50 flex flex-col w-full align-center "> */}
-      <body className="bg-violet-50 grid lg:grid-cols-[2fr_8fr_2fr]">
+      <body className="bg-violet-50 grid grid-cols-1 lg:grid-cols-[2fr_8fr_2fr]">
         <div className="col-span-full">
           <Nav />
         </div>

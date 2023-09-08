@@ -75,20 +75,29 @@ const Nav = () => {
               }`}
             >
               {categories?.items.map((category) => (
-                <li
-                  key={category.sys.id}
-                  className="cursor-pointer hover:underline px-4 mb-1"
-                >
-                  {(category.fields as any).title}
-                </li>
+                <Link href={`/categories/${category.sys.id}`}>
+                  <li
+                    onClick={() => setIsMenuShown(false)}
+                    key={category.sys.id}
+                    className="cursor-pointer hover:underline px-4 mb-1"
+                  >
+                    {(category.fields as any).title}
+                  </li>
+                </Link>
               ))}
             </ul>
           </li>
           {/* //TODO: */}
-          <li className="px-8 cursor-pointer hover:underline">
+          <li
+            className="px-8 cursor-pointer hover:underline"
+            onClick={() => setIsMenuShown(false)}
+          >
             <Link href={"/featured"}>featured posts</Link>
           </li>
-          <li className="px-8 cursor-pointer hover:underline">
+          <li
+            className="px-8 cursor-pointer hover:underline"
+            onClick={() => setIsMenuShown(false)}
+          >
             <Link href={"/recent"}>recent posts</Link>
           </li>
         </ul>
