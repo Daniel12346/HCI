@@ -1,38 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Low fidelity
 
-## Getting Started
+![Screenshot 2022-02-15 at 20.43.26.png](./ImagesForReadme/Screenshot_2022-02-15_at_20.43.26.png)
 
-First, run the development server:
+## High fidelity
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+prva iteracija
+![](./public/readme/Snimka%20zaslona%202023-03-07%20201333.png)
+druga iteracija - korištene "življe" boje da stranica bude privlačnija korisniku
+![](./public/readme/Snimka%20zaslona%202023-09-08%20080705.png)
+druga iteracija - pc verzija
+![](./public/readme/Snimka%20zaslona%202023-09-08%20080725.png)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+konačna verzija - konzistentnije boje
+![](./public/readme/Snimka%20zaslona%202023-09-08%20081328.png)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+konačna verzija
+![](./public/readme/Snimka%20zaslona%202023-09-08%20081353.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### Usability heuristics
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. Match between system and the real world
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Zbog jednostavne namjene stranice, nisu potrebne složene upute za korištenje i ne koriste se nepotrebni stručni termini.
+Također, za očekivati je da će prvo što bilo kojeg, a pogotovo novog,korisnika bloga zanima biti istaknutie tj. najbolje te najnovije objave, pa su na početnoj stranici upravo te kategorije.
 
-## Learn More
+2. Consistency and standards
 
-To learn more about Next.js, take a look at the following resources:
+Koristi se ograničena paleta boja i samo dva fonta s jasnim primjenama - sans serif za naslove i podnaslove, a serif koji je bolje prilagođen za čitanje duljeg teksta koristi se za sadržaj objava 
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Visibility of system status
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. User control and freedom 5. Error prevention 6. Help user’s recognize, diagnose and recover from errors 7. Recognition rather than recall 8. Flexibility and efficiency of use 9. Aesthetic and minimalist design 10. Help and documentation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### CRAP principles
+
+1. Contrast
+2. Repetition
+3. Alignment
+4. Proximity
