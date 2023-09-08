@@ -4,8 +4,10 @@
 
 prva iteracija
 ![](./public/readme/Snimka%20zaslona%202023-03-07%20201333.png)
+
 druga iteracija - korištene "življe" boje da stranica bude privlačnija korisniku
 ![](./public/readme/Snimka%20zaslona%202023-09-08%20080705.png)
+
 druga iteracija - pc verzija
 ![](./public/readme/Snimka%20zaslona%202023-09-08%20080725.png)
 
