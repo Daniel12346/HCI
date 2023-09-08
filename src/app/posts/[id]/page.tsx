@@ -89,17 +89,17 @@ const Post = async ({ params }: PostProps) => {
             >
               {category.fields.title}
             </span>
-            <span className="flex border-2 border-amber-400 px-1">
-              featured
-              {post.fields.isFeatured && (
+            {post.fields.isFeatured && (
+              <span className="flex border-2 border-amber-400 px-1">
+                featured
                 <Image
                   src={starIcon}
                   alt="featured post icon"
                   width={24}
                   height={24}
                 />
-              )}
-            </span>
+              </span>
+            )}
           </div>
         </div>
       </div>
