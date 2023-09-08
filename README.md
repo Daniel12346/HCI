@@ -1,7 +1,5 @@
 ## Low fidelity
 
-![Screenshot 2022-02-15 at 20.43.26.png](./ImagesForReadme/Screenshot_2022-02-15_at_20.43.26.png)
-
 ## High fidelity
 
 prva iteracija
@@ -26,13 +24,37 @@ Također, za očekivati je da će prvo što bilo kojeg, a pogotovo novog,korisni
 
 2. Consistency and standards
 
-Koristi se ograničena paleta boja i samo dva fonta s jasnim primjenama - sans serif za naslove i podnaslove, a serif koji je bolje prilagođen za čitanje duljeg teksta koristi se za sadržaj objava 
+Koristi se ograničena paleta boja i samo dva fonta s jasnim primjenama - sans serif za naslove i podnaslove, a serif koji je bolje prilagođen za čitanje duljeg teksta koristi se za sadržaj objava
 
 3. Visibility of system status
 
+![](./public/readme/Snimka%20zaslona%202023-09-08%20083301.png)
 
+Trokut pokraj riječi "topics" je okrenut udesno kad kategorije ispod njega nisu vidljive, odnosno prema dolje kad su vidljive
 
-4. User control and freedom 5. Error prevention 6. Help user’s recognize, diagnose and recover from errors 7. Recognition rather than recall 8. Flexibility and efficiency of use 9. Aesthetic and minimalist design 10. Help and documentation
+4. User control and freedom
+
+Pomoću navigacij koja je uvijek dostupna, korisnik može bilo kada pristupiti nekoj traženoj kategoriji, ali istovremeno je ograničen na ponuđene kategorije
+
+5. Error prevention
+
+Nastavljajući se na prethodni primjer, to što je navigacija uvijek dostupna znači da je manje vjerojatno da se korisnik izgubi i da pokuša pristupiti nepostojećoj stranici
+
+6. Help user’s recognize, diagnose and recover from errors
+
+7. Recognition rather than recall
+
+Korisniku je omogućeno pretraživanje prema naslovu objave pa može lakše naći željenu objavu.
+
+8. Flexibility and efficiency of use
+
+Od početnog zaslona do bilo koje kategorije potrebno je najviše 3 klika.
+
+9. Aesthetic and minimalist design
+
+10. Help and documentation
+
+Pokraj istaknutih objava dano je objašnjenje te kategorije.
 
 ### CRAP principles
 
